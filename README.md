@@ -30,3 +30,14 @@ After the depencies are installed:
 
 ## Compatibility
 Functions are designed for data acquired from Micro Ring Resonator experiments, and software "PicoScope 7 T&M" is used to read electric signals. Software crates waveforms which are written into csv files. In data, voltage over time is exhibited, and time parameters is turned into wavelength with programming. Example data is provided in repository. 
+
+## Manuscript Information
+Some highlights about output images are below
+![alt text](images/sweep.png)
+Voltage amplitudes between wavelengths of 1551 and 1555 nm. There are voltage drops, which are resonance peaks. Different parameters such as temperature or surface applications can affect those resonance peaks, which lead to the detection of changing parameter. As the shifting of resonance peaks increases, effect of paramater increases. 
+
+To analyze the peaks, each peak is matched with its index so that they can be compared easily. Function asks reference index and further indexes to compare. Indexes can be obversed as below.
+![alt text](images/index.png)
+
+As reference peak, index 6 is selected. Indexes to be compared are 36,61,65,95, respectively. Once peaks are selected, their comparison can be obversed using ploting function.
+![alt text](images/shift.png)
