@@ -27,3 +27,6 @@ After the depencies are installed:
 3. Paste the URL of your GitHub repository (e.g., `https://github.com/nicobuhur/ring-resonator-wave-shift`).
 4. Select the notebook file (e.g., `waveform_resonator_colab.ipynb or waveform_resonator_local.ipynb`) you want to run.
 5. Follow the instructions in the notebook to execute the code cells.
+
+## Compatibility
+Functions are designed for data acquired from Micro Ring Resonator experiments, and software "PicoScope 7 T&M" is used to read electric signals. Software crates waveforms which are written into csv files. In data, voltage over time is exhibited, and time parameters is turned into wavelength with programming. Example data is provided in repository. 
