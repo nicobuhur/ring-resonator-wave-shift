@@ -11,6 +11,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import find_peaks
+from scipy.stats import linregress
 from sklearn.preprocessing import RobustScaler
 from sklearn.linear_model import LinearRegression
 
@@ -49,10 +50,14 @@ Some highlights about output images are below
 Voltage amplitudes between wavelengths of 1551 and 1555 nm. There are voltage drops, which are resonance peaks. Different parameters such as temperature or surface applications can affect those resonance peaks, which lead to the detection of changing parameter. As the shifting of resonance peaks increases, effect of paramater increases. 
 
 To analyze the peaks, each peak is matched with its index so that they can be compared easily. Function asks reference index and further indexes to compare. Indexes can be obversed as below.
+![alt text](images/sweep_0.png)
 ![alt text](images/index.png)
 
-As reference peak, index 6 is selected. Indexes to be compared are 36,61,65,95, respectively. Once peaks are selected, their comparison can be obversed using ploting function.
+As reference peak, index 0 is selected. Indexes to be compared are 15,45,70,75, respectively. Once peaks are selected, their comparison can be obversed using ploting function.
 ![alt text](images/shift.png)
+
+Another shift plotting function is using consequative indexes. Once the reference index for each condition are selected, 0,15,45,70, and 75, the closest index can be chosen either automatically or manually. This function eliminates the problem of shift miscalculation due wavelength fluctuations because there is a reference index for each condition this time. Further information can be found in `waveform_resonator_colab.ipynb`. 
+![alt text](images/shift_0.png)
 
 ## Acknowledges
 The author would like to extend sincere appreciation to the JointLab Bioelectronics at Technische Universität Berlin, under the leadership of Prof. Mario Birkholz, for providing the necessary resources and conducive environment for conducting the experiments and research presented in this project. Special thanks are due to Phillip Schrenk, a bachelor student at JointLab Bioelectronics, for generously sharing NaCl data and providing valuable insights into the theory and application of micro ring resonators. Furthermore, the author acknowledges Anders Henriksson for his significant contributions to data processing and wavelength calculation, which have greatly enriched the quality and depth of this work.
